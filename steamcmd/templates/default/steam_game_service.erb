@@ -10,7 +10,7 @@
 INTERFACE="/usr/bin/screen -A -m -d -S <%= @name %>"
 
 # Server options string
-OPTS="-game <%= @game %> +map <%= @map %> +ip <%= @ip %> -port <%= @port %> +maxplayers <%= @maxplayers %> -pidfile <%= @pidfile %>"  +sv_setsteamaccount 7750A65AD1FBE07A86638C50B28AEF40 -net_port_try 1
+OPTS="-game <%= @game %> +map <%= @map %> +ip <%= @ip %> -port <%= @port %> +maxplayers <%= @maxplayers %> -pidfile <%= @pidfile %> +sv_setsteamaccount 7750A65AD1FBE07A86638C50B28AEF40 -net_port_try 1"
 
 service_start() {
     # Check if the pid files currently exist
