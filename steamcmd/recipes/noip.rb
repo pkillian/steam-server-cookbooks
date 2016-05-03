@@ -5,8 +5,8 @@ cookbook_file "/etc/no-ip2.conf" do
   group "root"
 end
 
-yum_repository "epel" do
-  enabled true
+execute "enable EPEL repository" do
+  command "yum-config-manager --enable epel"
 end
 
 yum_package "noip" do
